@@ -17,13 +17,14 @@ return new class extends Migration
 
             $table->id();
             
-            $table->tinyInteger('status', false, true);
+            $table->tinyInteger('status', false, true)->default(1);
             $table->tinyText('name');
             $table->decimal('rating', 10, 2, true);
             $table->text('description');
-            $table->string('image');
-            
+            $table->string('image');            
             $table->timestamps();
+            // in cerinta apare "delete_at" ca denumire a campului, poate ar fi trebuit sa fie "deleted_at"
+            $table->softDeletes('delete_at');
         });
     }
 

@@ -18,6 +18,9 @@ class MovieResource extends JsonResource
             'id' => $this->id,
             'title' => $this->name,
             'synopsis' => $this->description,
+            'status' => $this->status == 1 ? 'visible' : 'hidden',
+            'rating' => $this->rating,
+            'poster' => asset('posters/' . $this->image),
         ];
     }
 }

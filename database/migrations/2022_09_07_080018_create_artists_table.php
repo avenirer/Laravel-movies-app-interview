@@ -21,6 +21,8 @@ return new class extends Migration
             $table->tinyText('title');
             
             $table->timestamps();
+            // in cerinta apare "delete_at" ca denumire a campului, poate ar fi trebuit sa fie "deleted_at"
+            $table->softDeletes('delete_at');
         });
     }
 

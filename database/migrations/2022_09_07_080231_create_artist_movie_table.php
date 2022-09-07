@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        // Am creat artist_movie, pentru a fi conform cu normele Laravel; daca as fi numit tabela 'movie_artist' ar fi trebuit sa setez asta pe modelele implicate
         Schema::create('artist_movie', function (Blueprint $table) {
             
 
