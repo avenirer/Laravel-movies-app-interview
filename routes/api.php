@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('movies', \App\Http\Controllers\Api\MovieController::class)->only('index','destroy','store');
+Route::apiResource('movies', \App\Http\Controllers\Api\MovieController::class)->only('index','destroy','store','show');

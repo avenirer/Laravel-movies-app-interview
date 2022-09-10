@@ -6,43 +6,23 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import 'main-menu';
 
-#main-menu {
-  --bs-bg-opacity: 1;
-  background-color: $main-yellow!important;
-  padding: 0;
-  .navbar-toggler {
-    color: $white;
-    border: 0;
-    border-color: none;
-    &:focus {
-      outline: 0!important;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
+.movie-item {
+  .poster {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
   }
-  .offcanvas {
-    width: 100%;
-    background-color: $main-yellow!important;
-    .btn-close {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='currentColor' class='bi bi-arrow-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z'/%3E%3C/svg%3E");
-      background-size: 35px 35px;
-      color: $black;
-      opacity: 1;
-    }
-    .show>.nav-link, .navbar-nav .nav-link.active, & .show>.nav-link, .navbar-nav .nav-link.active {
-      color: $white!important;
-    }
+  .rating {
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star' class='svg-inline--fa fa-star fa-w-18' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23f5c518' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 18px 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 22px;
+    padding-top: 2px;
   }
-}
-
-#main-logo {
-  height: 60px;
-  width: 60px;
-}
-
-#main-menu-login img {
-  width: 40px;
-  height: 40px;
+  .title, .btn {
+    font-size: 14px;
+  }
 }

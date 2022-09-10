@@ -11,6 +11,11 @@ class Artist extends Model
     use HasFactory;
     use SoftDeletes;
 
+    public function getDeletedAtColumn()
+    {
+        return 'delete_at';
+    }
+
     // Am creat artist_movie, pentru a fi conform cu normele Laravel; daca as fi numit tabela 'movie_artist' ar fi trebuit sa setez asta pe modelele implicate: return $this->belongsToMany(Movie::class, 'movie_artist');
     public function movies()
     {

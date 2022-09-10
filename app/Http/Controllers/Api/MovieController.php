@@ -38,7 +38,7 @@ class MovieController extends Controller
             $movie->status      = $validated['status'];
             $movie->rating      = $validated['rating'];
             $movie->description = $validated['description'];
-            $movie->image       = $validated['poster']->store('posters', 'public') ?? '';
+            $movie->image       = $validated['poster']->storePublicly('posters', 'public') ?? '';
             $movie->save();
             return new MovieResource($movie);
         }

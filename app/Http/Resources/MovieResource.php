@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class MovieResource extends JsonResource
 {
@@ -20,7 +21,7 @@ class MovieResource extends JsonResource
             'synopsis' => $this->description,
             'status' => $this->status == 1 ? 'visible' : 'hidden',
             'rating' => $this->rating,
-            'poster' => asset('posters/' . $this->image),
+            'poster' => asset(Storage::url($this->image)),
         ];
     }
 }
